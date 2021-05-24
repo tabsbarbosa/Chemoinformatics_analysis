@@ -10,13 +10,14 @@ The workflow is illustrated using as an example Acetylcholinesterase (AChE) and 
 + Calculate the maximum substructure that a set of molecules have in common.
 + Find a central structure (scaffold) within all active compounds and identify its substituents at certain binding positions.
 
-### Requirements**
+### Requirements
 
-+ Knime version 4.3.1 or higher, a programming software through functional workflow <b><a href="https://www.knime.com/" target="_blank">Knime website</a></b>
-+ Our Knime workflow to capture relevant information about an indication of interest using different databases PPI-network.
-+ Input files to run the workflow Inputs
-+ Output files obtained using Alzheimer's disease as an example for the user to compare results Outputs
-+ Here you can have a complete visualization of the workflow Workflow Visualization.
++ Knime version 4.3.1, a programming software through functional workflow <b><a href="https://www.knime.com/" target="_blank">Knime website</a></b>
++ Our Knime workflow to capture relevant information about an indication of interest using different databases <a href="https://github.com/jdhurtadop2017/Chemoinformatics_analysis/raw/master/chemoinformatics.knwf">**Chemoinformatics-analysis**</a>.
++ Input files to run the workflow <a href="https://github.com/jdhurtadop2017/Chemoinformatics_analysis/raw/master/Input/Compounds%20with%20IC50%20%20Target%20AChE.rar">**Inputs**</a>.
++ Here you can have a complete visualization of the workflow <a href="https://workflow2app.netlify.app/" target="_blank">**Workflow Visualization**</a>.
+
+<img src="C:\Users\troja\Documents\Articule pharma-targets\Markdownquimioinformatica\media\Workflow.png" style="zoom:75%;" />
 
 ### 1. Data acquisition from <a href="https://www.ebi.ac.uk/chembl" target="_blank"><b>CHEMBL</b></a> 
 
@@ -27,6 +28,8 @@ Active compounds were separated from inactive compounds using the following filt
 Active IC50 < 5 µM
 
 Inactive IC50 >5 µM
+
+<img src="C:\Users\troja\Documents\Articule pharma-targets\Markdownquimioinformatica\media\figure1.png" style="zoom:60%;" />
 
 ### 2. **Molecular filtering: ADME and lead-likeness criteria**
 
@@ -40,13 +43,19 @@ The bioavailability of a compound is an important property of ADME. The Lipinski
 + Calculated LogP (octanol-water coefficient) <= 5
 + Subsequently, those compounds complying with three or four of Lipinski's rules were filtered out for further chemometric analysis.
 
+<img src="./media\figure2.png" style="zoom:75%;" />
+
 ### 3. Compound clustering
 
 Clustering can be used to identify groups of similar compounds, in order to pick a set of diverse compounds from these clusters for e.g. non-redundant experimental testing. The following steps show how to perform such a clustering based on a hierarchical clustering algorithm.
 
+<img src="./media\figure3.png" style="zoom:60%;" />
+
 ### 4. Maximum common substructures
 
 To visualize the shared scaffolds and thus emphasize the extent and type of chemical similarities or differences of a cluster of compounds, the maximum common substructure (MCS) can be calculated and highlighted. In this workflow, the MCS was calculated for the four significant clusters obtained from the previous node using the FMCS algorithm.
+
+<img src="./media\figure4.png" style="zoom:30%;" />
 
 ### 6. R-group Decomposition
 
@@ -58,3 +67,9 @@ This block of the workflow shows how to perform R-group decomposition using the 
 + Perform the R-group decomposition
 + Find how many molecules with each combination of the two selected R-groups are in the data set.
 + Visualize the results of the R-group decomposition.
+
+<img src="./media\figure5.png" style="zoom:60%;" />
+
+### 4. Citation
+
+* Hurtado-Pachon, Jonathan; Peña-Varas, Carlos; Ramírez, David. Chemoinformatics analysis for computer-aided drug design (CADD). Santiago, Chile; 2021.
