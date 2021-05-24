@@ -55,7 +55,9 @@ Clustering can be used to identify groups of similar compounds, in order to pick
 
 To visualize the shared scaffolds and thus emphasize the extent and type of chemical similarities or differences of a cluster of compounds, the maximum common substructure (MCS) can be calculated and highlighted. In this workflow, the MCS was calculated for the four significant clusters obtained from the previous node using the FMCS algorithm.
 
-<img src="./media\figure4.png" style="zoom:20%;" />
+<img src="./media\figure4.png" style="zoom:30%;" />
+
+
 
 ### 6. R-group Decomposition
 
